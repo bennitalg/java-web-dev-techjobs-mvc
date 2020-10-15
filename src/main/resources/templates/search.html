@@ -33,7 +33,18 @@
 
         <input type="submit" value="Search" />
     </form>
-
+    <table class="job-listing">
+        <tr th:each ="job: ${jobs}">
+            <td>
+                <p th:text="${'ID: ' + job.id}"></p><br/>
+                <p th:text="${'Name: ' + job.name}"></p><br/>
+                <p th:text="${'Employer: ' + job.employer}"></p><br/>
+                <p th:text="${'Location: ' + job.location}"></p><br/>
+                <p th:text="${'Position Type: ' + job.positionType}"></p><br/>
+                <p th:text="${'Skill: ' + job.coreCompetency}"></p>
+            </td>
+        </tr>
+    </table>
     <hr />
 
     <!-- TODO #4 - Loop over the search results to display all job fields. -->
